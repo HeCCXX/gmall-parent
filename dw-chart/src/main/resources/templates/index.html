@@ -70,16 +70,7 @@
                             <li>
                                 <a class="active-menu" href="index"><i class="fa fa-dashboard"></i>每日统计</a>
                             </li>
-                            <li>
-                                <a href="table"><i class="fa fa-table"></i>数据展示</a>
-                            </li>
-                            <li>
-                                <a href="map"><i class="fa fa-edit"></i>地图展示</a>
-                            </li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="ui-elements.html"><i class="fa fa-desktop"></i>离线数据</a>
                     </li>
 
                 </ul>
@@ -92,46 +83,9 @@
             <div id="page-inner">
 
 
-                <!--<div class="row">
-                    <div class="col-md-12">
-
-						<ol class="breadcrumb">
-                          <li>请选择入职日期<input  name="entryDate" placeholder="请选择入职日期" id="blrz-entry-date-start" type="text" ></li>
-                        </ol>
-                    </div>
-                </div>-->
-                <!-- /. ROW  -->
-
                 <div class="row">
                     <ul id="total" class="um-page-tabs">
 
-                        <!--<li class="um-page-tab" style="width: 50px; min-width: 162px;">
-                            <div class="um-page-title">新增用户(今日)</div>
-                            <div class="um-page-value">5</div>
-                            <div class="um-page-rate"><span class="um-page-rate-name">昨日 </span><span
-                                    class="um-page-rate-value">0.0%</span><span class="um-page-rate-icon"><i class="iconfont"></i></span></div>
-                        </li>
-                        <li class="um-page-tab active-tab" style="width: 95px; min-width: 162px;">
-                            <div class="um-page-title">启动次数(今日)</div>
-                            <div class="um-page-value">2,702</div>
-                            <div class="um-page-rate"><span class="um-page-rate-name">昨日 </span><span
-                                    class="um-page-rate-value">-2.33% </span><span class="um-page-rate-icon"><i
-                                    class="iconfont indicator-icon-down"></i></span></div>
-                        </li>
-                        <li class="um-page-tab" style="width: 76px; min-width: 162px;">
-                            <div class="um-page-title">时段累计日活(今日)</div>
-                            <div class="um-page-value">804</div>
-                            <div class="um-page-rate"><span class="um-page-rate-name">昨日 </span><span
-                                    class="um-page-rate-value">+0.28% </span><span class="um-page-rate-icon"><i
-                                    class="iconfont indicator-icon-up"></i></span></div>
-                        </li>
-                        <li class="um-page-tab" style="width: 76px; min-width: 162px;">
-                            <div class="um-page-title">分时活跃用户(今日)</div>
-                            <div class="um-page-value">252</div>
-                            <div class="um-page-rate"><span class="um-page-rate-name">昨日 </span><span
-                                    class="um-page-rate-value">+1.49% </span><span class="um-page-rate-icon"><i
-                                    class="iconfont indicator-icon-up"></i></span></div>
-                        </li>-->
                     </ul>
                 </div>
 				
@@ -148,31 +102,9 @@
             </div>
         </div>
     </div>
-    <!-- /. WRAPPER  -->
-    <!-- JS Scripts-->
+
     <script type="text/javascript">
 
-        /*$("#blrz-entry-date-start").datetimepicker({//选择年月日
-            format: 'yyyy-mm-dd',
-            language: 'zh-CN',
-            weekStart: 1,
-            todayBtn: 1,//显示‘今日’按钮
-            autoclose: 1,
-            todayHighlight: 1,
-            startView: 2,
-            minView: 2,  //Number, String. 默认值：0, 'hour'，日期时间选择器所能够提供的最精确的时间选择视图。
-
-            clearBtn:true,//清除按钮
-
-            forceParse: 0
-        });
-
-        $("#blrz-entry-date-start").on('change',function(){
-            var thisEntryDate = $("#blrz-entry-date-start").val();
-
-        });*/
-
-        //var tag = "l1";
             var tag = "";
             var idList = [];
 
@@ -246,27 +178,6 @@
                 $("#"+data.id).addClass("active-tab")
                 tag = data.id;
                 showAnalysis(data.id)
-                //alert(data.id)
-                /*if(data.id=="l0"){
-                    //alert("11")
-                    $("#l1").removeClass("active-tab")
-                    $("#l2").removeClass("active-tab")
-                    $("#l0").addClass("active-tab")
-                    tag = "l0"
-                    showAnalysis(data.id)
-                }else if(data.id=="l1"){
-                    $("#l2").removeClass("active-tab")
-                    $("#l0").removeClass("active-tab")
-                    $("#l1").addClass("active-tab")
-                    tag = "l1"
-                    showAnalysis(data.id)
-                }else if(data.id=="l2"){
-                    $("#l1").removeClass("active-tab")
-                    $("#l0").removeClass("active-tab")
-                    $("#l2").addClass("active-tab")
-                    tag = "l2"
-                    showAnalysis(data.id)
-                }*/
             }
 
 
@@ -349,19 +260,6 @@
                                 }
                             }
 
-                            //names = ydata.keys()
-                            //ynums = ydata.values()
-                            //tnums = tdata,values()
-                            /*for(var i=0;i<ydata.length;i++){
-                                names.push(ydata[i].time);    //挨个取出类别并填入类别数组
-                                //alert(ydata[i].datetime)
-                            }
-                            for(var i=0;i<ydata.length;i++){
-                                ynums.push(ydata[i].num);    //挨个取出销量并填入销量数组
-                            }
-                            for(var i=0;i<tdata.length;i++){
-                                tnums.push(tdata[i].num);    //挨个取出销量并填入销量数组
-                            }*/
                             myChart.hideLoading();    //隐藏加载动画
                             myChart.setOption({        //加载数据图表
                                 /*xAxis: {
