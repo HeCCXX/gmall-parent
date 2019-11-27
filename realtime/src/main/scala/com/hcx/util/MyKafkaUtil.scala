@@ -8,6 +8,16 @@ import org.apache.spark.streaming.StreamingContext
 import org.apache.spark.streaming.dstream.InputDStream
 import org.apache.spark.streaming.kafka010.{ConsumerStrategies, KafkaUtils, LocationStrategies}
 
+
+/**
+ * @Author HCX
+ * @Description //TODO kafka工具类
+ * @Date 17:33 2019-11-25
+ *
+ * @return
+ * @exception
+ **/
+
 object MyKafkaUtil {
 
   private  val properties :Properties = PropertiesUtil.load("config.properties")

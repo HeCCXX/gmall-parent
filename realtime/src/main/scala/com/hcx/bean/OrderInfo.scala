@@ -1,5 +1,14 @@
 package com.hcx.bean
 
+/**
+ * @Author HCX
+ * @Description //TODO  orderInfo样例类
+ * @Date 17:32 2019-11-25
+ *
+ * @return
+ * @exception
+ **/
+
 case class OrderInfo(area: String,
                      consignee: String,
                      orderComment: String,

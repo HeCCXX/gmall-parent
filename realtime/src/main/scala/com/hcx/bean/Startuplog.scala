@@ -1,4 +1,12 @@
 package com.hcx.bean
+/**
+ * @Author HCX
+ * @Description //TODO startuplog样例类
+ * @Date 17:33 2019-11-25
+ *
+ * @return
+ * @exception
+ **/
 
 case class Startuplog(mid:String,
                       uid:String,

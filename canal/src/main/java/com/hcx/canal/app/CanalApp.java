@@ -21,7 +21,6 @@ import java.util.List;
 public class CanalApp {
     public static void main(String[] args) {
         CanalConnector canalConnector = CanalConnectors.newSingleConnector(new InetSocketAddress("hadoop1", 11111), "example", "", "");
-
         while (true){
             //连接、订阅表、获取数据
             canalConnector.connect();

@@ -17,8 +17,10 @@ object OrderApp {
     val conf: SparkConf = new SparkConf().setAppName("order_app").setMaster("local[*]")
     val ssc = new StreamingContext(conf,Seconds(5))
 
+    //读取数据
     val inputStream: InputDStream[ConsumerRecord[String, String]] = MyKafkaUtil.getKafkaStream(GmallConstant.KAFKA_TOPIC_ORDER,ssc)
 
+    //将数据进行处理
     val orderInfoDstream: DStream[OrderInfo] = inputStream.map {
       record =>
         val jsonstr: String = record.value()
@@ -33,6 +35,7 @@ object OrderApp {
         orderInfo.createHourMinute = time(0) + ":" + time(1)
         orderInfo
     }
+    //将数据保存到es
     orderInfoDstream.foreachRDD{
       rdd =>
         rdd.foreachPartition(orderItr =>
